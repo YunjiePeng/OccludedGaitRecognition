@@ -17,11 +17,11 @@ image_list = sorted(os.listdir("./training/images/"))
 static_occ_categories = [
     "object--bench", 
     "object--fire-hydrant",
-    # "object--junction-box",
+    "object--junction-box",
     "object--mailbox",
-    # "object--support--pole",
-    # "object--support--utility-pole",
-    # "object--trash-can",
+    "object--support--pole",
+    "object--support--utility-pole",
+    "object--trash-can",
     "object--vehicle--bicycle",
     "object--vehicle--motorcycle",
 ]
@@ -203,29 +203,8 @@ def main(args, labels, panoptic_per_image_id, panoptic_category_per_id, image_id
     # assert len(cur_segments) == 0
         
 
-image_list = image_list[:1000]
-des_path = "./results0kto1k/"
-
-# image_list = image_list[1000:2000]
-# des_path = "./results1kto2k/"
-
-# image_list = image_list[2000:3000]
-# des_path = "./results2kto3k/"
-
-# image_list = image_list[3000:4000]
-# des_path = "./results3kto4k/"
-
-# image_list = image_list[4000:5000]
-# des_path = "./results4kto5k/"
-
-# image_list = image_list[5000:6000]
-# des_path = "./results5kto6k/"
-
-# image_list = image_list[6000:7000]
-# des_path = "./results6kto7k/"
-
-# image_list = image_list[7000:8000]
-# des_path = "./results7kto8k/"
+image_list = image_list[:8000]
+des_path = "./results/"
 
 if __name__ == "__main__":
     args = parser.parse_args()
@@ -245,5 +224,7 @@ if __name__ == "__main__":
     for img in image_list:
         img_id = img.split('.')[0]
         print("\nimg_count:{}, img_id:{}".format(img_count, img_id))
-        main(args, labels, panoptic_per_image_id, panoptic_category_per_id, img_id)
+        
+        
+        (args, labels, panoptic_per_image_id, panoptic_category_per_id, img_id)
         img_count += 1
