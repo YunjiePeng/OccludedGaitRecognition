@@ -17,10 +17,7 @@ image_list = sorted(os.listdir("./training/images/"))
 static_occ_categories = [
     "object--bench", 
     "object--fire-hydrant",
-    "object--junction-box",
-    "object--mailbox",
     "object--support--pole",
-    "object--support--utility-pole",
     "object--trash-can",
     "object--vehicle--bicycle",
     "object--vehicle--motorcycle",
@@ -29,10 +26,7 @@ static_occ_categories = [
 static_occ_dict = {
     "object--bench": {"readable": "Bench", "color": [250, 0, 30]},
     "object--fire-hydrant": {"readable": "Fire Hydrant", "color": [100, 170, 30]},
-    "object--junction-box": {"readable": "Junction Box", "color": [40, 40, 40]}, 
-    "object--mailbox": {"readable": "Mailbox", "color": [33, 33, 33]}, 
     "object--support--pole": {"readable": "Pole", "color": [153, 153, 153]}, 
-    "object--support--utility-pole": {"readable": "Utility Pole", "color": [0, 0, 80]},
     "object--trash-can": {"readable": "Trash Can", "color": [140, 140, 20]},  
     "object--vehicle--bicycle": {"readable": "Bicycle", "color": [119, 11, 32]}, 
     "object--vehicle--motorcycle": {"readable": "Motorcycle", "color": [0, 0, 230]}, 
