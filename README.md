@@ -1,5 +1,5 @@
 # OccludedGaitRecognition
-This repository is for the paper accepted at IJCNN2023.
+This repository is for the paper "Occluded Gait Recognition" accepted at IJCNN2023.
 
 @INPROCEEDINGS{Peng2306:Occluded,
 AUTHOR="Yunjie Peng and Chunshui Cao and Zhiqiang He",
