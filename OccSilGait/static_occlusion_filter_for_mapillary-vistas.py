@@ -203,8 +203,8 @@ def main(args, labels, panoptic_per_image_id, panoptic_category_per_id, image_id
     # assert len(cur_segments) == 0
         
 
-# image_list = image_list[:1000]
-# des_path = "./results/"
+image_list = image_list[:1000]
+des_path = "./results0kto1k/"
 
 # image_list = image_list[1000:2000]
 # des_path = "./results1kto2k/"
@@ -224,8 +224,8 @@ def main(args, labels, panoptic_per_image_id, panoptic_category_per_id, image_id
 # image_list = image_list[6000:7000]
 # des_path = "./results6kto7k/"
 
-image_list = image_list[7000:8000]
-des_path = "./results7kto8k/"
+# image_list = image_list[7000:8000]
+# des_path = "./results7kto8k/"
 
 if __name__ == "__main__":
     args = parser.parse_args()
