@@ -13,4 +13,4 @@ static_occlusions---Bench---"10LozR-r_PnVyUloTy7P_A-object--bench-3490375-sil.pn
                   ...
                   
 
-2. Run generate_occlusion_withFrameOccLabel.py to generate the OccCASIA-B dataset.
+2. Run generate_occlusion.py to generate the OccCASIA-B dataset.
