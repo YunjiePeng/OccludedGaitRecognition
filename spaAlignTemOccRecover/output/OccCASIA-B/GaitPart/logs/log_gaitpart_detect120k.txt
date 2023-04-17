@@ -1,0 +1,20 @@
+[2022-10-08 14:47:18] [INFO]: {'enable_float16': False, 'restore_ckpt_strict': True, 'restore_hint': 120000, 'save_name': 'gaitpart_occ', 'eval_func': 'identification', 'sampler': {'batch_size': 8, 'sample_type': 'all_ordered', 'type': 'InferenceSampler'}, 'transform': [{'img_w': 64, 'type': 'BaseSilCuttingTransform'}], 'metric': 'euc'}
+[2022-10-08 14:47:18] [INFO]: {'model': 'GaitPart', 'backbone_cfg': {'in_channels': 1, 'layers_cfg': ['BC-32', 'BC-32', 'M', 'FC-64-2', 'FC-64-2', 'M', 'FC-128-3', 'FC-128-3'], 'type': 'Plain'}, 'SeparateFCs': {'in_channels': 128, 'out_channels': 128, 'parts_num': 16}, 'bin_num': [16]}
+[2022-10-08 14:47:18] [INFO]: {'loss_term_weights': 1.0, 'margin': 0.2, 'type': 'TripletLoss', 'log_prefix': 'triplet'}
+[2022-10-08 14:47:18] [INFO]: {'dataset_name': 'OccCASIA-BN', 'dataset_root': '/home/pengyunjie/data/casia-bn2/occlusion64pkl', 'num_workers': 1, 'dataset_partition': './misc/partitions/OccCASIA-BN_detect.json', 'remove_no_gallery': False, 'cache': False, 'test_dataset_name': 'OccCASIA-BN'}
+[2022-10-08 14:47:18] [INFO]: -------- Test Pid List --------
+[2022-10-08 14:47:18] [INFO]: [175, 176, ..., 224]
+[2022-10-08 14:47:26] [INFO]: Restore Parameters from output/OccCASIA-BN/GaitPart/gaitpart_occ/checkpoints/gaitpart_occ-120000.pt !!!
+[2022-10-08 14:47:27] [INFO]: Parameters Count: 1.20400M
+[2022-10-08 14:47:27] [INFO]: Model Initialization Finished!
+[2022-10-08 14:47:56] [INFO]: ===Rank-1 (Include identical-view cases)===
+[2022-10-08 14:47:56] [INFO]: NM: 82.713,	BG: 70.903,	CL: 54.636
+[2022-10-08 14:47:56] [INFO]: ===Rank-1 (Exclude identical-view cases)===
+[2022-10-08 14:47:56] [INFO]: NM: 81.131,	BG: 68.951,	CL: 52.471
+[2022-10-08 14:47:56] [INFO]: ===Rank-1 of each angle (Exclude identical-view cases)===
+[2022-10-08 14:47:56] [INFO]: NM: [65.30 83.70 90.40 90.40 83.90 76.90 84.60 87.40 91.10 80.90 57.84]
+[2022-10-08 14:47:56] [INFO]: BG: [59.20 72.60 80.70 79.30 70.70 61.90 66.30 74.20 76.60 64.80 52.16]
+[2022-10-08 14:47:56] [INFO]: CL: [41.40 57.70 61.70 58.60 56.60 50.50 56.90 62.00 60.80 45.30 25.69]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
