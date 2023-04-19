@@ -1,0 +1,20 @@
+[2022-10-08 14:55:50] [INFO]: {'enable_float16': False, 'restore_ckpt_strict': True, 'restore_hint': 40000, 'save_name': 'baseline2d_occ', 'eval_func': 'identification', 'sampler': {'batch_size': 8, 'sample_type': 'all_ordered', 'type': 'InferenceSampler'}, 'transform': [{'img_w': 64, 'type': 'BaseSilCuttingTransform'}], 'metric': 'euc'}
+[2022-10-08 14:55:50] [INFO]: {'model': 'Baseline2d', 'in_channels': [1, 32, 64, 128], 'SeparateFCs': {'in_channels': 128, 'out_channels': 256, 'parts_num': 32}, 'SeparateBNNecks': {'class_num': 74, 'in_channels': 256, 'parts_num': 32}, 'bin_num': [32]}
+[2022-10-08 14:55:50] [INFO]: [{'loss_term_weights': 1.0, 'margin': 0.2, 'type': 'TripletLoss', 'log_prefix': 'triplet'}, {'loss_term_weights': 0.1, 'scale': 16, 'type': 'CrossEntropyLoss', 'log_prefix': 'softmax', 'log_accuracy': True}]
+[2022-10-08 14:55:50] [INFO]: {'dataset_name': 'OccCASIA-BN', 'dataset_root': '/home/pengyunjie/data/casia-bn2/occlusion64pkl', 'num_workers': 1, 'dataset_partition': './misc/partitions/OccCASIA-BN_crowd.json', 'remove_no_gallery': False, 'cache': False, 'test_dataset_name': 'OccCASIA-BN'}
+[2022-10-08 14:55:50] [INFO]: -------- Test Pid List --------
+[2022-10-08 14:55:50] [INFO]: [125, 126, ..., 174]
+[2022-10-08 14:55:56] [INFO]: Restore Parameters from output/OccCASIA-BN/Baseline2d/baseline2d_occ/checkpoints/baseline2d_occ-40000.pt !!!
+[2022-10-08 14:55:59] [INFO]: Parameters Count: 1.95766M
+[2022-10-08 14:55:59] [INFO]: Model Initialization Finished!
+[2022-10-08 14:56:24] [INFO]: ===Rank-1 (Include identical-view cases)===
+[2022-10-08 14:56:24] [INFO]: NM: 85.652,	BG: 77.437,	CL: 58.951
+[2022-10-08 14:56:24] [INFO]: ===Rank-1 (Exclude identical-view cases)===
+[2022-10-08 14:56:24] [INFO]: NM: 84.335,	BG: 75.545,	CL: 56.510
+[2022-10-08 14:56:24] [INFO]: ===Rank-1 of each angle (Exclude identical-view cases)===
+[2022-10-08 14:56:24] [INFO]: NM: [64.30 83.60 88.70 92.20 83.90 80.20 84.50 89.30 95.20 89.70 76.08]
+[2022-10-08 14:56:24] [INFO]: BG: [54.60 72.90 82.90 84.90 75.20 69.10 76.40 80.40 86.60 81.40 66.60]
+[2022-10-08 14:56:24] [INFO]: CL: [36.20 56.30 63.20 69.10 63.30 55.00 55.70 63.80 63.20 57.70 38.11]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
