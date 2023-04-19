@@ -1,0 +1,20 @@
+[2023-04-14 10:06:05] [INFO]: {'enable_float16': False, 'restore_ckpt_strict': True, 'restore_hint': 40000, 'save_name': 'spaAlignTemOccRecover', 'eval_func': 'identification', 'sampler': {'batch_size': 8, 'sample_type': 'all_ordered', 'type': 'InferenceSampler'}, 'transform': [{'img_w': 64, 'type': 'BaseSilCuttingTransform'}], 'metric': 'euc'}
+[2023-04-14 10:06:05] [INFO]: {'model': 'SpatialAlignTemporalOcclusionRecover', 'align_cfg': {'h_ratio': 0.4, 'w_ratio': 0.4, 'feat_c': [1, 8, 16, 32]}, 'time_dim': 5, 'in_channels': [1, 32, 64, 128], 'MaskedReconModule': {'depth': 2, 'parts': 8, 'cycle': 25, 'block_cfg': {'dim': 128, 'num_heads': 4, 'mlp_ratio': 1, 'qkv_bias': True, 'drop': 0}}, 'SeparateFCs': {'in_channels': 128, 'out_channels': 256, 'parts_num': 32}, 'SeparateBNNecks': {'class_num': 74, 'in_channels': 256, 'parts_num': 32}, 'bin_num': [32]}
+[2023-04-14 10:06:05] [INFO]: [{'loss_term_weights': 1.0, 'margin': 0.2, 'type': 'TripletLoss', 'log_prefix': 'triplet'}, {'loss_term_weights': 0.1, 'scale': 16, 'type': 'CrossEntropyLoss', 'log_prefix': 'softmax', 'log_accuracy': True}, {'loss_term_weights': 0.1, 'type': 'AffineTransformationLoss', 'alpha': 1.0, 'beta': 0.1, 'log_prefix': 'affine'}, {'loss_term_weights': 0.2, 'in_c': 128, 'type': 'NonOccRecMSELoss', 'log_prefix': 'nonOccRecMSE'}]
+[2023-04-14 10:06:05] [INFO]: {'dataset_name': 'OccCASIA-B', 'dataset_root': '/home/pengyunjie/data/OccCASIA-B/occlusionwithOccLab64pkl', 'num_workers': 1, 'dataset_partition': './misc/partitions/OccCASIA-B_static.json', 'remove_no_gallery': False, 'cache': False, 'test_dataset_name': 'OccCASIA-B'}
+[2023-04-14 10:06:05] [INFO]: -------- Test Pid List --------
+[2023-04-14 10:06:05] [INFO]: [225, 226, ..., 274]
+[2023-04-14 10:06:11] [INFO]: Restore Parameters from output/OccCASIA-B/SpatialAlignTemporalOcclusionRecover/spaAlignTemOccRecover/checkpoints/spaAlignTemOccRecover-40000.pt !!!
+[2023-04-14 10:06:12] [INFO]: Parameters Count: 8.14942M
+[2023-04-14 10:06:12] [INFO]: Model Initialization Finished!
+[2023-04-14 10:07:04] [INFO]: ===Rank-1 (Include identical-view cases)===
+[2023-04-14 10:07:04] [INFO]: NM: 91.954,	BG: 86.587,	CL: 71.591
+[2023-04-14 10:07:04] [INFO]: ===Rank-1 (Exclude identical-view cases)===
+[2023-04-14 10:07:04] [INFO]: NM: 91.232,	BG: 85.606,	CL: 69.916
+[2023-04-14 10:07:04] [INFO]: ===Rank-1 of each angle (Exclude identical-view cases)===
+[2023-04-14 10:07:04] [INFO]: NM: [69.50 97.00 98.40 96.30 93.60 91.80 94.70 97.70 99.00 97.10 68.45]
+[2023-04-14 10:07:04] [INFO]: BG: [60.90 93.50 96.10 93.20 89.10 84.70 87.70 91.10 96.20 93.70 55.46]
+[2023-04-14 10:07:04] [INFO]: CL: [33.00 78.00 85.00 82.50 77.90 74.40 78.70 80.90 82.40 70.70 25.58]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************

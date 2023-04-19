@@ -1,0 +1,20 @@
+[2022-10-25 14:32:38] [INFO]: {'enable_float16': False, 'restore_ckpt_strict': True, 'restore_hint': 40000, 'save_name': 'stbackbone_occ_unfixed', 'eval_func': 'identification', 'sampler': {'batch_size': 8, 'sample_type': 'all_ordered', 'type': 'InferenceSampler'}, 'transform': [{'img_w': 64, 'type': 'BaseSilCuttingTransform'}], 'metric': 'euc'}
+[2022-10-25 14:32:38] [INFO]: {'model': 'SpatialTemporalBackbone', 'time_dim': 5, 'in_channels': [1, 32, 64, 128], 'SeparateFCs': {'in_channels': 128, 'out_channels': 256, 'parts_num': 32}, 'SeparateBNNecks': {'class_num': 74, 'in_channels': 256, 'parts_num': 32}, 'bin_num': [32]}
+[2022-10-25 14:32:38] [INFO]: [{'loss_term_weights': 1.0, 'margin': 0.2, 'type': 'TripletLoss', 'log_prefix': 'triplet'}, {'loss_term_weights': 0.1, 'scale': 16, 'type': 'CrossEntropyLoss', 'log_prefix': 'softmax', 'log_accuracy': True}]
+[2022-10-25 14:32:38] [INFO]: {'dataset_name': 'OccCASIA-BN', 'dataset_root': '/home/pengyunjie/data/casia-bn2/occlusion64pkl', 'num_workers': 1, 'dataset_partition': './misc/partitions/OccCASIA-BN_detect.json', 'remove_no_gallery': False, 'cache': False, 'test_dataset_name': 'OccCASIA-BN'}
+[2022-10-25 14:32:38] [INFO]: -------- Test Pid List --------
+[2022-10-25 14:32:38] [INFO]: [175, 176, ..., 224]
+[2022-10-25 14:32:43] [INFO]: Restore Parameters from output/OccCASIA-BN/SpatialTemporalBackbone/stbackbone_occ_unfixed/checkpoints/stbackbone_occ_unfixed-40000.pt !!!
+[2022-10-25 14:32:44] [INFO]: Parameters Count: 2.06467M
+[2022-10-25 14:32:44] [INFO]: Model Initialization Finished!
+[2022-10-25 14:33:01] [INFO]: ===Rank-1 (Include identical-view cases)===
+[2022-10-25 14:33:01] [INFO]: NM: 88.093,	BG: 78.891,	CL: 64.980
+[2022-10-25 14:33:01] [INFO]: ===Rank-1 (Exclude identical-view cases)===
+[2022-10-25 14:33:01] [INFO]: NM: 86.984,	BG: 77.154,	CL: 62.751
+[2022-10-25 14:33:01] [INFO]: ===Rank-1 of each angle (Exclude identical-view cases)===
+[2022-10-25 14:33:01] [INFO]: NM: [71.20 89.70 96.00 92.60 88.40 85.20 88.90 92.40 95.40 89.40 67.63]
+[2022-10-25 14:33:01] [INFO]: BG: [63.90 81.30 87.40 84.70 81.00 72.00 78.20 81.70 83.10 75.70 59.69]
+[2022-10-25 14:33:01] [INFO]: CL: [47.60 66.20 72.10 71.00 67.70 63.00 68.90 70.80 70.50 57.30 35.16]
+*****************************************
+Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+*****************************************
