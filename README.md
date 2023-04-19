@@ -1,6 +1,7 @@
 # OccludedGaitRecognition
 This repository is for the paper "Occluded Gait Recognition" accepted at IJCNN2023.
 
+‘’‘
 @inproceddings{peng2306Occluded,  
   author="Yunjie Peng and Chunshui Cao and Zhiqiang He",  
   title="Occluded Gait Recognition",  
@@ -10,3 +11,4 @@ This repository is for the paper "Occluded Gait Recognition" accepted at IJCNN20
   month=jun,  
   year=2023  
 }
+’‘’
